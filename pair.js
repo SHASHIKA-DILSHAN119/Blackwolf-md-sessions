@@ -28,7 +28,7 @@ function randomMegaId(length = 6, numberLength = 4) {
 async function uploadCredsToMega(credsPath) {
     try {
         const storage = await new Storage({
-            email: 'shashikasdddrt@gmail.com', // Your Mega A/c Email Here
+            email: 'agni119.67@gmail.com', // Your Mega A/c Email Here
             password: 'Shashika@2008' // Your Mega A/c Password Here
         }).ready;
         console.log('Mega storage initialized.');
@@ -105,7 +105,7 @@ router.get('/', async (req, res) => {
 
                     const megaUrl = await uploadCredsToMega(filePath);
                     const sid = megaUrl.includes("https://mega.nz/file/")
-                        ? 'botname-MD~' + megaUrl.split("https://mega.nz/file/")[1]
+                        ? 'Agni' + megaUrl.split("https://mega.nz/file/")[1]
                         : 'Error: Invalid URL';
 
                     console.log(`Session ID: ${sid}`);
@@ -113,7 +113,7 @@ router.get('/', async (req, res) => {
                     const session = await Malvin.sendMessage(Malvin.user.id, { text: sid });
 
                     const MALVIN_TEXT = `
-🎉 *Welcome to BLACKWOLF!* 🚀  
+🎉 *Welcome to agni!* 🚀  
 
 🔒 *Your Session ID* is ready!  ⚠️ _Keep it private and secure — dont share it with anyone._ 
 
@@ -128,7 +128,7 @@ router.get('/', async (req, res) => {
 
 ⭐ *Show Some Love!* Give us a ⭐ on GitHub and support the developer of: 👉 [ BLACKwolf GitHub Repo](https://github.com/shashika2008/)  
 
-🚀 _Thanks for choosing BLACKwolf — Let the automation begin!_ ✨`;
+🚀 _Thanks for choosing agni — Let the automation begin!_ ✨`;
 
                     await Malvin.sendMessage(Malvin.user.id, { text: MALVIN_TEXT }, { quoted: session });
 
